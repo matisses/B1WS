@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://192.168.5.76/CommunicatorWS/CommunicatorWS.svc?wsdl" uri="xml-resources/web-service-references/CommunicatorWS/wsdl/192.168.5.76/CommunicatorWS/CommunicatorWS.svc.wsdl"/>
+    <system systemId="http://192.168.5.76/CommunicatorWS/CommunicatorWS.svc?xsd=xsd0" uri="xml-resources/web-service-references/CommunicatorWS/wsdl/192.168.5.76/CommunicatorWS/CommunicatorWS.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://192.168.5.76/CommunicatorWS/CommunicatorWS.svc?xsd=xsd1" uri="xml-resources/web-service-references/CommunicatorWS/wsdl/192.168.5.76/CommunicatorWS/CommunicatorWS.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://192.168.5.76/CommunicatorWS/CommunicatorWS.svc?xsd=xsd2" uri="xml-resources/web-service-references/CommunicatorWS/wsdl/192.168.5.76/CommunicatorWS/CommunicatorWS.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://192.168.5.76/CommunicatorWS/CommunicatorWS.svc?xsd=xsd3" uri="xml-resources/web-service-references/CommunicatorWS/wsdl/192.168.5.76/CommunicatorWS/CommunicatorWS.svc.xsd_xsd3.xsd"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/LoginService.wsdl" uri="xml-resources/web-service-references/LoginService/wsdl/192.168.5.76/B1WS/WebReferences/LoginService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/BusinessPartnersService.wsdl" uri="xml-resources/web-service-references/BusinessPartnersService/wsdl/192.168.5.76/B1WS/WebReferences/BusinessPartnersService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/InventoryGenExitService.wsdl" uri="xml-resources/web-service-references/InventoryGenExitService/wsdl/192.168.5.76/B1WS/WebReferences/InventoryGenExitService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/StockTransferService.wsdl" uri="xml-resources/web-service-references/StockTransferService/wsdl/192.168.5.76/B1WS/WebReferences/StockTransferService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/CreditNotesService.wsdl" uri="xml-resources/web-service-references/CreditNotesService/wsdl/192.168.5.76/B1WS/WebReferences/CreditNotesService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/VendorPaymentsService.wsdl" uri="xml-resources/web-service-references/VendorPaymentsService/wsdl/192.168.5.76/B1WS/WebReferences/VendorPaymentsService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/InventoryGenEntryService.wsdl" uri="xml-resources/web-service-references/InventoryGenEntryService/wsdl/192.168.5.76/B1WS/WebReferences/InventoryGenEntryService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/OrdersService.wsdl" uri="xml-resources/web-service-references/OrdersService/wsdl/192.168.5.76/B1WS/WebReferences/OrdersService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/JournalEntriesService.wsdl" uri="xml-resources/web-service-references/JournalEntriesService/wsdl/192.168.5.76/B1WS/WebReferences/JournalEntriesService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/DraftsService.wsdl" uri="xml-resources/web-service-references/DraftsService/wsdl/192.168.5.76/B1WS/WebReferences/DraftsService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/ServiceCallsService.wsdl" uri="xml-resources/web-service-references/ServiceCallsService/wsdl/192.168.5.76/B1WS/WebReferences/ServiceCallsService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/IncomingPaymentsService.wsdl" uri="xml-resources/web-service-references/IncomingPaymentsService/wsdl/192.168.5.76/B1WS/WebReferences/IncomingPaymentsService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/ItemsService.wsdl" uri="xml-resources/web-service-references/ItemsService/wsdl/192.168.5.76/B1WS/WebReferences/ItemsService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/InvoicesService.wsdl" uri="xml-resources/web-service-references/InvoicesService/wsdl/192.168.5.76/B1WS/WebReferences/InvoicesService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/QuotationsService.wsdl" uri="xml-resources/web-service-references/QuotationsService/wsdl/192.168.5.76/B1WS/WebReferences/QuotationsService.wsdl"/>
+    <system systemId="http://192.168.5.76/B1WS/WebReferences/EmployeesInfoService.wsdl" uri="xml-resources/web-service-references/EmployeesInfoService/wsdl/192.168.5.76/B1WS/WebReferences/EmployeesInfoService.wsdl"/>
+    <system systemId="http://192.168.5.75/B1WS/WebReferences/EmployeesInfoService.wsdl" uri="xml-resources/web-service-references/EmployeesInfoService/wsdl/192.168.5.75/B1WS/WebReferences/EmployeesInfoService.wsdl"/>
+    <system systemId="http://192.168.5.75/B1WS/WebReferences/ItemsService.wsdl" uri="xml-resources/web-service-references/ItemsService/wsdl/192.168.5.75/B1WS/WebReferences/ItemsService.wsdl"/>
+    <system systemId="http://192.168.5.75/B1WS/WebReferences/ActivitiesService.wsdl" uri="xml-resources/web-service-references/ActivitiesService/wsdl/192.168.5.75/B1WS/WebReferences/ActivitiesService.wsdl"/>
+</catalog>

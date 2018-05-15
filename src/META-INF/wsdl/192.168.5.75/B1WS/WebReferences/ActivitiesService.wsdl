@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="ActivitiesService" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s1="http://www.sap.com/SBO/DIS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="ActivitiesService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.sap.com/SBO/DIS">
+      <s:element name="AddActivityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ActivityParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateActivityResponse">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteActivityResponse">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActivityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:Activity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActivityListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ActivitiesParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSingleInstanceFromSeriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:Activity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSingleInstanceInSeriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ActivityParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSingleInstanceFromSeriesResponse">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTopNActivityInstancesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ActivityInstancesParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Activity">
+        <s:complexType>
+          <s:all>
+            <s:element minOccurs="0" name="ActivityCode" type="s:long" />
+            <s:element minOccurs="0" name="CardCode" type="s:string" />
+            <s:element minOccurs="0" name="Notes" type="s:string" />
+            <s:element minOccurs="0" name="ActivityDate" type="s:date" />
+            <s:element minOccurs="0" name="ActivityTime" type="s:time" />
+            <s:element minOccurs="0" name="StartDate" type="s:date" />
+            <s:element minOccurs="0" name="Closed">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="CloseDate" type="s:date" />
+            <s:element minOccurs="0" name="Phone" type="s:string" />
+            <s:element minOccurs="0" name="Fax" type="s:string" />
+            <s:element minOccurs="0" name="Subject" type="s:long" />
+            <s:element minOccurs="0" name="DocType" type="s:string" />
+            <s:element minOccurs="0" name="DocNum" type="s:string" />
+            <s:element minOccurs="0" name="DocEntry" type="s:string" />
+            <s:element minOccurs="0" name="Priority">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="pr_Low" />
+                  <s:enumeration value="pr_Normal" />
+                  <s:enumeration value="pr_High" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="Details" type="s:string" />
+            <s:element minOccurs="0" name="Activity">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="cn_Conversation" />
+                  <s:enumeration value="cn_Meeting" />
+                  <s:enumeration value="cn_Task" />
+                  <s:enumeration value="cn_Other" />
+                  <s:enumeration value="cn_Note" />
+                  <s:enumeration value="cn_Campaign" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="ActivityType" type="s:long" />
+            <s:element minOccurs="0" name="Location" type="s:long" />
+            <s:element minOccurs="0" name="StartTime" type="s:time" />
+            <s:element minOccurs="0" name="EndTime" type="s:time" />
+            <s:element minOccurs="0" name="Duration" type="s:double" />
+            <s:element minOccurs="0" name="DurationType">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="du_Minuts" />
+                  <s:enumeration value="du_Hours" />
+                  <s:enumeration value="du_Days" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="SalesEmployee" type="s:long" />
+            <s:element minOccurs="0" name="ContactPersonCode" type="s:long" />
+            <s:element minOccurs="0" name="HandledBy" type="s:long" />
+            <s:element minOccurs="0" name="Reminder">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="ReminderPeriod" type="s:double" />
+            <s:element minOccurs="0" name="ReminderType">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="du_Minuts" />
+                  <s:enumeration value="du_Hours" />
+                  <s:enumeration value="du_Days" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="City" type="s:string" />
+            <s:element minOccurs="0" name="PersonalFlag">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="Street" type="s:string" />
+            <s:element minOccurs="0" name="ParentObjectId" type="s:long" />
+            <s:element minOccurs="0" name="ParentObjectType" type="s:string" />
+            <s:element minOccurs="0" name="Room" type="s:string" />
+            <s:element minOccurs="0" name="InactiveFlag">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="State" type="s:string" />
+            <s:element minOccurs="0" name="PreviousActivity" type="s:long" />
+            <s:element minOccurs="0" name="Country" type="s:string" />
+            <s:element minOccurs="0" name="Status" type="s:long" />
+            <s:element minOccurs="0" name="TentativeFlag">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="EndDueDate" type="s:date" />
+            <s:element minOccurs="0" name="DocTypeEx" type="s:string" />
+            <s:element minOccurs="0" name="AttachmentEntry" type="s:long" />
+            <s:element minOccurs="0" name="RecurrencePattern">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="rpNone" />
+                  <s:enumeration value="rpDaily" />
+                  <s:enumeration value="rpWeekly" />
+                  <s:enumeration value="rpMonthly" />
+                  <s:enumeration value="rpAnnually" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="EndType">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="etNoEndDate" />
+                  <s:enumeration value="etByCounter" />
+                  <s:enumeration value="etByDate" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="SeriesStartDate" type="s:date" />
+            <s:element minOccurs="0" name="SeriesEndDate" type="s:date" />
+            <s:element minOccurs="0" name="MaxOccurrence" type="s:long" />
+            <s:element minOccurs="0" name="Interval" type="s:long" />
+            <s:element minOccurs="0" name="Sunday">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="Monday">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="Tuesday">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="Wednesday">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="Thursday">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="Friday">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="Saturday">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="RepeatOption">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="roByDate" />
+                  <s:enumeration value="roByWeekDay" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="BelongedSeriesNum" type="s:long" />
+            <s:element minOccurs="0" name="IsRemoved">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="AddressName" type="s:string" />
+            <s:element minOccurs="0" name="AddressType">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="bo_ShipTo" />
+                  <s:enumeration value="bo_BillTo" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="HandledByEmployee" type="s:long" />
+            <s:element minOccurs="0" name="RecurrenceSequenceSpecifier">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="rsFirst" />
+                  <s:enumeration value="rsSecond" />
+                  <s:enumeration value="rsThird" />
+                  <s:enumeration value="rsFourth" />
+                  <s:enumeration value="rsLast" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="RecurrenceDayInMonth" type="s:long" />
+            <s:element minOccurs="0" name="RecurrenceMonth" type="s:long" />
+            <s:element minOccurs="0" name="RecurrenceDayOfWeek">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="rdowDay" />
+                  <s:enumeration value="rdowWeekDay" />
+                  <s:enumeration value="rdowWeekendDay" />
+                  <s:enumeration value="rdowSun" />
+                  <s:enumeration value="rdowMon" />
+                  <s:enumeration value="rdowTue" />
+                  <s:enumeration value="rdowWed" />
+                  <s:enumeration value="rdowThu" />
+                  <s:enumeration value="rdowFri" />
+                  <s:enumeration value="rdowSat" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="SalesOpportunityId" type="s:long" />
+            <s:element minOccurs="0" name="SalesOpportunityLine" type="s:long" />
+          </s:all>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivityParams">
+        <s:complexType>
+          <s:all>
+            <s:element minOccurs="0" name="ActivityCode" type="s:long" />
+          </s:all>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivitiesParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="ActivityParams">
+              <s:complexType>
+                <s:all>
+                  <s:element minOccurs="0" name="ActivityCode" type="s:long" />
+                </s:all>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivityInstanceParams">
+        <s:complexType>
+          <s:all>
+            <s:element minOccurs="0" name="ActivityCode" type="s:long" />
+            <s:element minOccurs="0" name="InstanceDate" type="s:date" />
+          </s:all>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivityInstancesListParams">
+        <s:complexType>
+          <s:all>
+            <s:element minOccurs="0" name="StartDate" type="s:date" />
+            <s:element minOccurs="0" name="InstanceCount" type="s:long" />
+          </s:all>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActivityInstancesParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="unbounded" name="ActivityInstanceParams">
+              <s:complexType>
+                <s:all>
+                  <s:element minOccurs="0" name="ActivityCode" type="s:long" />
+                  <s:element minOccurs="0" name="InstanceDate" type="s:date" />
+                </s:all>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MsgHeader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceName">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="ActivitiesService" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="ActivitiesService">
+      <s:import namespace="http://www.sap.com/SBO/DIS" />
+      <s:element name="AddActivity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:Activity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateActivity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:Activity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteActivity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ActivityParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActivity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ActivityParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActivityList">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSingleInstanceFromSeries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ActivityInstanceParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSingleInstanceInSeries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:Activity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSingleInstanceFromSeries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ActivityInstanceParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTopNActivityInstances">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:ActivityInstancesListParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddActivitySoapIn">
+    <wsdl:part name="parameters" element="tns:AddActivity" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="AddActivitySoapOut">
+    <wsdl:part name="parameters" element="s1:AddActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateActivitySoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateActivity" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateActivitySoapOut">
+    <wsdl:part name="parameters" element="s1:UpdateActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteActivitySoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteActivity" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteActivitySoapOut">
+    <wsdl:part name="parameters" element="s1:DeleteActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActivitySoapIn">
+    <wsdl:part name="parameters" element="tns:GetActivity" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetActivitySoapOut">
+    <wsdl:part name="parameters" element="s1:GetActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActivityListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActivityList" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetActivityListSoapOut">
+    <wsdl:part name="parameters" element="s1:GetActivityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleInstanceFromSeriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSingleInstanceFromSeries" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleInstanceFromSeriesSoapOut">
+    <wsdl:part name="parameters" element="s1:GetSingleInstanceFromSeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSingleInstanceInSeriesSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSingleInstanceInSeries" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSingleInstanceInSeriesSoapOut">
+    <wsdl:part name="parameters" element="s1:UpdateSingleInstanceInSeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSingleInstanceFromSeriesSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSingleInstanceFromSeries" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSingleInstanceFromSeriesSoapOut">
+    <wsdl:part name="parameters" element="s1:DeleteSingleInstanceFromSeriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTopNActivityInstancesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTopNActivityInstances" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetTopNActivityInstancesSoapOut">
+    <wsdl:part name="parameters" element="s1:GetTopNActivityInstancesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ActivitiesServiceSoap">
+    <wsdl:operation name="AddActivity">
+      <wsdl:input message="tns:AddActivitySoapIn" />
+      <wsdl:output message="tns:AddActivitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateActivity">
+      <wsdl:input message="tns:UpdateActivitySoapIn" />
+      <wsdl:output message="tns:UpdateActivitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActivity">
+      <wsdl:input message="tns:DeleteActivitySoapIn" />
+      <wsdl:output message="tns:DeleteActivitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivity">
+      <wsdl:input message="tns:GetActivitySoapIn" />
+      <wsdl:output message="tns:GetActivitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityList">
+      <wsdl:input message="tns:GetActivityListSoapIn" />
+      <wsdl:output message="tns:GetActivityListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleInstanceFromSeries">
+      <wsdl:input message="tns:GetSingleInstanceFromSeriesSoapIn" />
+      <wsdl:output message="tns:GetSingleInstanceFromSeriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSingleInstanceInSeries">
+      <wsdl:input message="tns:UpdateSingleInstanceInSeriesSoapIn" />
+      <wsdl:output message="tns:UpdateSingleInstanceInSeriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSingleInstanceFromSeries">
+      <wsdl:input message="tns:DeleteSingleInstanceFromSeriesSoapIn" />
+      <wsdl:output message="tns:DeleteSingleInstanceFromSeriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopNActivityInstances">
+      <wsdl:input message="tns:GetTopNActivityInstancesSoapIn" />
+      <wsdl:output message="tns:GetTopNActivityInstancesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ActivitiesServiceSoap" type="tns:ActivitiesServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddActivity">
+      <soap:operation soapAction="ActivitiesService/AddActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:AddActivitySoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateActivity">
+      <soap:operation soapAction="ActivitiesService/UpdateActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:UpdateActivitySoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActivity">
+      <soap:operation soapAction="ActivitiesService/DeleteActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:DeleteActivitySoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivity">
+      <soap:operation soapAction="ActivitiesService/GetActivity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:GetActivitySoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityList">
+      <soap:operation soapAction="ActivitiesService/GetActivityList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:GetActivityListSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleInstanceFromSeries">
+      <soap:operation soapAction="ActivitiesService/GetSingleInstanceFromSeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:GetSingleInstanceFromSeriesSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSingleInstanceInSeries">
+      <soap:operation soapAction="ActivitiesService/UpdateSingleInstanceInSeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:UpdateSingleInstanceInSeriesSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSingleInstanceFromSeries">
+      <soap:operation soapAction="ActivitiesService/DeleteSingleInstanceFromSeries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:DeleteSingleInstanceFromSeriesSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopNActivityInstances">
+      <soap:operation soapAction="ActivitiesService/GetTopNActivityInstances" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:GetTopNActivityInstancesSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActivitiesServiceSoap12" type="tns:ActivitiesServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddActivity">
+      <soap12:operation soapAction="ActivitiesService/AddActivity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:AddActivitySoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateActivity">
+      <soap12:operation soapAction="ActivitiesService/UpdateActivity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:UpdateActivitySoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteActivity">
+      <soap12:operation soapAction="ActivitiesService/DeleteActivity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:DeleteActivitySoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivity">
+      <soap12:operation soapAction="ActivitiesService/GetActivity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:GetActivitySoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityList">
+      <soap12:operation soapAction="ActivitiesService/GetActivityList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:GetActivityListSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleInstanceFromSeries">
+      <soap12:operation soapAction="ActivitiesService/GetSingleInstanceFromSeries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:GetSingleInstanceFromSeriesSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSingleInstanceInSeries">
+      <soap12:operation soapAction="ActivitiesService/UpdateSingleInstanceInSeries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:UpdateSingleInstanceInSeriesSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSingleInstanceFromSeries">
+      <soap12:operation soapAction="ActivitiesService/DeleteSingleInstanceFromSeries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:DeleteSingleInstanceFromSeriesSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopNActivityInstances">
+      <soap12:operation soapAction="ActivitiesService/GetTopNActivityInstances" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:GetTopNActivityInstancesSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ActivitiesService">
+    <wsdl:port name="ActivitiesServiceSoap" binding="tns:ActivitiesServiceSoap">
+      <soap:address location="http://192.168.5.75/B1WS/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActivitiesServiceSoap12" binding="tns:ActivitiesServiceSoap12">
+      <soap12:address location="http://192.168.5.75/B1WS/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

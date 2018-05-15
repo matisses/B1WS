@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-LoginService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/LoginService"/>
+        <property name="wsdl-LoginService" location="xml-resources/web-service-references/LoginService/wsdl/192.168.5.76/B1WS/WebReferences/LoginService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/LoginService" destdir="${build.generated.dir}/jax-wsCache/LoginService" wsdl="${wsdl-LoginService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/LoginService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.login">
+            <depends file="${wsdl-LoginService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/LoginService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/LoginService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-LoginService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/LoginService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/login"/>
+    </target>
+    <target name="wsimport-client-InvoicesService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/InvoicesService"/>
+        <property name="wsdl-InvoicesService" location="xml-resources/web-service-references/InvoicesService/wsdl/192.168.5.76/B1WS/WebReferences/InvoicesService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/InvoicesService" destdir="${build.generated.dir}/jax-wsCache/InvoicesService" wsdl="${wsdl-InvoicesService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/InvoicesService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.invoices">
+            <depends file="${wsdl-InvoicesService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/InvoicesService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/InvoicesService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-InvoicesService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/InvoicesService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/invoices"/>
+    </target>
+    <target name="wsimport-client-QuotationsService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/QuotationsService"/>
+        <property name="wsdl-QuotationsService" location="xml-resources/web-service-references/QuotationsService/wsdl/192.168.5.76/B1WS/WebReferences/QuotationsService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/QuotationsService" destdir="${build.generated.dir}/jax-wsCache/QuotationsService" wsdl="${wsdl-QuotationsService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/QuotationsService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.quotations">
+            <depends file="${wsdl-QuotationsService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/QuotationsService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/QuotationsService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-QuotationsService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/QuotationsService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/quotations"/>
+    </target>
+    <target name="wsimport-client-IncomingPaymentsService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/IncomingPaymentsService"/>
+        <property name="wsdl-IncomingPaymentsService" location="xml-resources/web-service-references/IncomingPaymentsService/wsdl/192.168.5.76/B1WS/WebReferences/IncomingPaymentsService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/IncomingPaymentsService" destdir="${build.generated.dir}/jax-wsCache/IncomingPaymentsService" wsdl="${wsdl-IncomingPaymentsService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/IncomingPaymentsService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.incomingpayment">
+            <depends file="${wsdl-IncomingPaymentsService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/IncomingPaymentsService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/IncomingPaymentsService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-IncomingPaymentsService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/IncomingPaymentsService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/incomingpayment"/>
+    </target>
+    <target name="wsimport-client-BusinessPartnersService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/BusinessPartnersService"/>
+        <property name="wsdl-BusinessPartnersService" location="xml-resources/web-service-references/BusinessPartnersService/wsdl/192.168.5.76/B1WS/WebReferences/BusinessPartnersService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/BusinessPartnersService" destdir="${build.generated.dir}/jax-wsCache/BusinessPartnersService" wsdl="${wsdl-BusinessPartnersService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/BusinessPartnersService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.businessparters">
+            <depends file="${wsdl-BusinessPartnersService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/BusinessPartnersService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/BusinessPartnersService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-BusinessPartnersService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/BusinessPartnersService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/client/businessparters"/>
+    </target>
+    <target name="wsimport-client-InventoryGenExitService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/InventoryGenExitService"/>
+        <property name="wsdl-InventoryGenExitService" location="xml-resources/web-service-references/InventoryGenExitService/wsdl/192.168.5.76/B1WS/WebReferences/InventoryGenExitService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/InventoryGenExitService" destdir="${build.generated.dir}/jax-wsCache/InventoryGenExitService" wsdl="${wsdl-InventoryGenExitService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/InventoryGenExitService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.goodsissue">
+            <depends file="${wsdl-InventoryGenExitService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/InventoryGenExitService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/InventoryGenExitService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-InventoryGenExitService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/InventoryGenExitService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/goodsissue"/>
+    </target>
+    <target name="wsimport-client-CreditNotesService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CreditNotesService"/>
+        <property name="wsdl-CreditNotesService" location="xml-resources/web-service-references/CreditNotesService/wsdl/192.168.5.76/B1WS/WebReferences/CreditNotesService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CreditNotesService" destdir="${build.generated.dir}/jax-wsCache/CreditNotesService" wsdl="${wsdl-CreditNotesService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/CreditNotesService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.creditnotes">
+            <depends file="${wsdl-CreditNotesService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CreditNotesService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CreditNotesService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CreditNotesService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/CreditNotesService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/returnedinvoices"/>
+    </target>
+    <target name="wsimport-client-VendorPaymentsService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/VendorPaymentsService"/>
+        <property name="wsdl-VendorPaymentsService" location="xml-resources/web-service-references/VendorPaymentsService/wsdl/192.168.5.76/B1WS/WebReferences/VendorPaymentsService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/VendorPaymentsService" destdir="${build.generated.dir}/jax-wsCache/VendorPaymentsService" wsdl="${wsdl-VendorPaymentsService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/VendorPaymentsService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.vendorpayment">
+            <depends file="${wsdl-VendorPaymentsService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/VendorPaymentsService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/VendorPaymentsService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-VendorPaymentsService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/VendorPaymentsService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/vendorpayment"/>
+    </target>
+    <target name="wsimport-client-InventoryGenEntryService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/InventoryGenEntryService"/>
+        <property name="wsdl-InventoryGenEntryService" location="xml-resources/web-service-references/InventoryGenEntryService/wsdl/192.168.5.76/B1WS/WebReferences/InventoryGenEntryService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/InventoryGenEntryService" destdir="${build.generated.dir}/jax-wsCache/InventoryGenEntryService" wsdl="${wsdl-InventoryGenEntryService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/InventoryGenEntryService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.goodsreceipt">
+            <depends file="${wsdl-InventoryGenEntryService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/InventoryGenEntryService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/InventoryGenEntryService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-InventoryGenEntryService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/InventoryGenEntryService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/goodsreceipt"/>
+    </target>
+    <target name="wsimport-client-OrdersService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/OrdersService"/>
+        <property name="wsdl-OrdersService" location="xml-resources/web-service-references/OrdersService/wsdl/192.168.5.76/B1WS/WebReferences/OrdersService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/OrdersService" destdir="${build.generated.dir}/jax-wsCache/OrdersService" wsdl="${wsdl-OrdersService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/OrdersService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.orders">
+            <depends file="${wsdl-OrdersService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/OrdersService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/OrdersService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-OrdersService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/OrdersService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/orders"/>
+    </target>
+    <target name="wsimport-client-JournalEntriesService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/JournalEntriesService"/>
+        <property name="wsdl-JournalEntriesService" location="xml-resources/web-service-references/JournalEntriesService/wsdl/192.168.5.76/B1WS/WebReferences/JournalEntriesService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/JournalEntriesService" destdir="${build.generated.dir}/jax-wsCache/JournalEntriesService" wsdl="${wsdl-JournalEntriesService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/JournalEntriesService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.journalentries">
+            <depends file="${wsdl-JournalEntriesService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/JournalEntriesService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/JournalEntriesService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-JournalEntriesService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/JournalEntriesService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/journalentries"/>
+    </target>
+    <target name="wsimport-client-DraftsService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/DraftsService"/>
+        <property name="wsdl-DraftsService" location="xml-resources/web-service-references/DraftsService/wsdl/192.168.5.76/B1WS/WebReferences/DraftsService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/DraftsService" destdir="${build.generated.dir}/jax-wsCache/DraftsService" wsdl="${wsdl-DraftsService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/DraftsService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.drafts">
+            <depends file="${wsdl-DraftsService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/DraftsService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/DraftsService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-DraftsService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/DraftsService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/drafts"/>
+    </target>
+    <target name="wsimport-client-ServiceCallsService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ServiceCallsService"/>
+        <property name="wsdl-ServiceCallsService" location="xml-resources/web-service-references/ServiceCallsService/wsdl/192.168.5.76/B1WS/WebReferences/ServiceCallsService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ServiceCallsService" destdir="${build.generated.dir}/jax-wsCache/ServiceCallsService" wsdl="${wsdl-ServiceCallsService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.76/B1WS/WebReferences/ServiceCallsService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.servicecalls">
+            <depends file="${wsdl-ServiceCallsService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ServiceCallsService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ServiceCallsService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ServiceCallsService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ServiceCallsService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/servicecalls"/>
+    </target>
+    <target name="wsimport-client-EmployeesInfoService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/EmployeesInfoService"/>
+        <property name="wsdl-EmployeesInfoService" location="xml-resources/web-service-references/EmployeesInfoService/wsdl/192.168.5.75/B1WS/WebReferences/EmployeesInfoService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/EmployeesInfoService" destdir="${build.generated.dir}/jax-wsCache/EmployeesInfoService" wsdl="${wsdl-EmployeesInfoService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.75/B1WS/WebReferences/EmployeesInfoService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.employeesinfo">
+            <depends file="${wsdl-EmployeesInfoService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/EmployeesInfoService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/EmployeesInfoService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-EmployeesInfoService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/EmployeesInfoService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/employeesinfo"/>
+    </target>
+    <target name="wsimport-client-ItemsService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ItemsService"/>
+        <property name="wsdl-ItemsService" location="xml-resources/web-service-references/ItemsService/wsdl/192.168.5.75/B1WS/WebReferences/ItemsService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ItemsService" destdir="${build.generated.dir}/jax-wsCache/ItemsService" wsdl="${wsdl-ItemsService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.75/B1WS/WebReferences/ItemsService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.items">
+            <depends file="${wsdl-ItemsService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ItemsService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ItemsService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ItemsService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ItemsService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/items"/>
+    </target>
+    <target name="wsimport-client-ActivitiesService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ActivitiesService"/>
+        <property name="wsdl-ActivitiesService" location="xml-resources/web-service-references/ActivitiesService/wsdl/192.168.5.75/B1WS/WebReferences/ActivitiesService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ActivitiesService" destdir="${build.generated.dir}/jax-wsCache/ActivitiesService" wsdl="${wsdl-ActivitiesService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.5.75/B1WS/WebReferences/ActivitiesService.wsdl" xnocompile="true" xendorsed="true" package="co.matisses.b1ws.activities">
+            <depends file="${wsdl-ActivitiesService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ActivitiesService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ActivitiesService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ActivitiesService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ActivitiesService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/co/matisses/b1ws/activities"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-LoginService, wsimport-client-InvoicesService, wsimport-client-QuotationsService, wsimport-client-IncomingPaymentsService, wsimport-client-BusinessPartnersService, wsimport-client-InventoryGenExitService, wsimport-client-CreditNotesService, wsimport-client-VendorPaymentsService, wsimport-client-InventoryGenEntryService, wsimport-client-OrdersService, wsimport-client-JournalEntriesService, wsimport-client-DraftsService, wsimport-client-ServiceCallsService, wsimport-client-EmployeesInfoService, wsimport-client-ItemsService, wsimport-client-ActivitiesService"/>
+</project>

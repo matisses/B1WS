@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="EmployeesInfoService" xmlns:s1="http://www.sap.com/SBO/DIS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="EmployeesInfoService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.sap.com/SBO/DIS">
+      <s:element name="AddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:EmployeeInfoParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetByParamsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:EmployeeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateResponse">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveResponse">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelResponse">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseResponse">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="EmployeeInfo">
+        <s:complexType>
+          <s:all>
+            <s:element minOccurs="0" name="EmployeeID" type="s:long" />
+            <s:element minOccurs="0" name="LastName" type="s:string" />
+            <s:element minOccurs="0" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" name="MiddleName" type="s:string" />
+            <s:element minOccurs="0" name="Gender">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="gt_Female" />
+                  <s:enumeration value="gt_Male" />
+                  <s:enumeration value="gt_Undefined" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="JobTitle" type="s:string" />
+            <s:element minOccurs="0" name="EmployeeType" type="s:long" />
+            <s:element minOccurs="0" name="Department" type="s:long" />
+            <s:element minOccurs="0" name="Branch" type="s:long" />
+            <s:element minOccurs="0" name="WorkStreet" type="s:string" />
+            <s:element minOccurs="0" name="WorkBlock" type="s:string" />
+            <s:element minOccurs="0" name="WorkZipCode" type="s:string" />
+            <s:element minOccurs="0" name="WorkCity" type="s:string" />
+            <s:element minOccurs="0" name="WorkCounty" type="s:string" />
+            <s:element minOccurs="0" name="WorkCountryCode" type="s:string" />
+            <s:element minOccurs="0" name="WorkStateCode" type="s:string" />
+            <s:element minOccurs="0" name="Manager" type="s:long" />
+            <s:element minOccurs="0" name="ApplicationUserID" type="s:long" />
+            <s:element minOccurs="0" name="SalesPersonCode" type="s:long" />
+            <s:element minOccurs="0" name="OfficePhone" type="s:string" />
+            <s:element minOccurs="0" name="OfficeExtension" type="s:string" />
+            <s:element minOccurs="0" name="MobilePhone" type="s:string" />
+            <s:element minOccurs="0" name="Pager" type="s:string" />
+            <s:element minOccurs="0" name="HomePhone" type="s:string" />
+            <s:element minOccurs="0" name="Fax" type="s:string" />
+            <s:element minOccurs="0" name="eMail" type="s:string" />
+            <s:element minOccurs="0" name="StartDate" type="s:date" />
+            <s:element minOccurs="0" name="StatusCode" type="s:long" />
+            <s:element minOccurs="0" name="Salary" type="s:double" />
+            <s:element minOccurs="0" name="SalaryUnit">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="scu_Hour" />
+                  <s:enumeration value="scu_Day" />
+                  <s:enumeration value="scu_Week" />
+                  <s:enumeration value="scu_Month" />
+                  <s:enumeration value="scu_Year" />
+                  <s:enumeration value="scu_Semimonthly" />
+                  <s:enumeration value="scu_Biweekly" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="EmployeeCosts" type="s:double" />
+            <s:element minOccurs="0" name="EmployeeCostUnit">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="scu_Hour" />
+                  <s:enumeration value="scu_Day" />
+                  <s:enumeration value="scu_Week" />
+                  <s:enumeration value="scu_Month" />
+                  <s:enumeration value="scu_Year" />
+                  <s:enumeration value="scu_Semimonthly" />
+                  <s:enumeration value="scu_Biweekly" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="TerminationDate" type="s:date" />
+            <s:element minOccurs="0" name="TreminationReason" type="s:long" />
+            <s:element minOccurs="0" name="BankCode" type="s:string" />
+            <s:element minOccurs="0" name="BankBranch" type="s:string" />
+            <s:element minOccurs="0" name="BankBranchNum" type="s:string" />
+            <s:element minOccurs="0" name="BankAccount" type="s:string" />
+            <s:element minOccurs="0" name="HomeStreet" type="s:string" />
+            <s:element minOccurs="0" name="HomeBlock" type="s:string" />
+            <s:element minOccurs="0" name="HomeZipCode" type="s:string" />
+            <s:element minOccurs="0" name="HomeCity" type="s:string" />
+            <s:element minOccurs="0" name="HomeCounty" type="s:string" />
+            <s:element minOccurs="0" name="HomeCountry" type="s:string" />
+            <s:element minOccurs="0" name="HomeState" type="s:string" />
+            <s:element minOccurs="0" name="DateOfBirth" type="s:date" />
+            <s:element minOccurs="0" name="CountryOfBirth" type="s:string" />
+            <s:element minOccurs="0" name="MartialStatus">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="mts_Single" />
+                  <s:enumeration value="mts_Married" />
+                  <s:enumeration value="mts_Divorced" />
+                  <s:enumeration value="mts_Widowed" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="NumOfChildren" type="s:long" />
+            <s:element minOccurs="0" name="IdNumber" type="s:string" />
+            <s:element minOccurs="0" name="CitizenshipCountryCode" type="s:string" />
+            <s:element minOccurs="0" name="PassportNumber" type="s:string" />
+            <s:element minOccurs="0" name="PassportExpirationDate" type="s:date" />
+            <s:element minOccurs="0" name="Picture" type="s:string" />
+            <s:element minOccurs="0" name="Remarks" type="s:string" />
+            <s:element minOccurs="0" name="SalaryCurrency" type="s:string" />
+            <s:element minOccurs="0" name="EmployeeCostsCurrency" type="s:string" />
+            <s:element minOccurs="0" name="WorkBuildingFloorRoom" type="s:string" />
+            <s:element minOccurs="0" name="HomeBuildingFloorRoom" type="s:string" />
+            <s:element minOccurs="0" name="Position" type="s:long" />
+            <s:element minOccurs="0" name="AttachmentEntry" type="s:long" />
+            <s:element minOccurs="0" name="CostCenterCode" type="s:string" />
+            <s:element minOccurs="0" name="CompanyNumber" type="s:string" />
+            <s:element minOccurs="0" name="VacationPreviousYear" type="s:long" />
+            <s:element minOccurs="0" name="VacationCurrentYear" type="s:long" />
+            <s:element minOccurs="0" name="MunicipalityKey" type="s:string" />
+            <s:element minOccurs="0" name="TaxClass" type="s:string" />
+            <s:element minOccurs="0" name="IncomeTaxLiability" type="s:string" />
+            <s:element minOccurs="0" name="Religion" type="s:string" />
+            <s:element minOccurs="0" name="PartnerReligion" type="s:string" />
+            <s:element minOccurs="0" name="ExemptionAmount" type="s:double" />
+            <s:element minOccurs="0" name="ExemptionUnit">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="eeu_None" />
+                  <s:enumeration value="eeu_Yearly" />
+                  <s:enumeration value="eeu_Monthly" />
+                  <s:enumeration value="eeu_Weekly" />
+                  <s:enumeration value="eeu_Daily" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="ExemptionCurrency" type="s:string" />
+            <s:element minOccurs="0" name="AdditionalAmount" type="s:double" />
+            <s:element minOccurs="0" name="AdditionalUnit">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="eeu_None" />
+                  <s:enumeration value="eeu_Yearly" />
+                  <s:enumeration value="eeu_Monthly" />
+                  <s:enumeration value="eeu_Weekly" />
+                  <s:enumeration value="eeu_Daily" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="AdditionalCurrency" type="s:string" />
+            <s:element minOccurs="0" name="TaxOfficeName" type="s:string" />
+            <s:element minOccurs="0" name="TaxOfficeNumber" type="s:string" />
+            <s:element minOccurs="0" name="HealthInsuranceName" type="s:string" />
+            <s:element minOccurs="0" name="HealthInsuranceCode" type="s:string" />
+            <s:element minOccurs="0" name="HealthInsuranceType" type="s:string" />
+            <s:element minOccurs="0" name="SocialInsuranceNumber" type="s:string" />
+            <s:element minOccurs="0" name="ProfessionStatus" type="s:string" />
+            <s:element minOccurs="0" name="EducationStatus" type="s:string" />
+            <s:element minOccurs="0" name="PersonGroup" type="s:string" />
+            <s:element minOccurs="0" name="JobTitleCode" type="s:string" />
+            <s:element minOccurs="0" name="BankCodeForDATEV" type="s:string" />
+            <s:element minOccurs="0" name="DeviatingBankAccountOwner">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="SpouseFirstName" type="s:string" />
+            <s:element minOccurs="0" name="SpouseSurname" type="s:string" />
+            <s:element minOccurs="0" name="ExternalEmployeeNumber" type="s:string" />
+            <s:element minOccurs="0" name="BirthPlace" type="s:string" />
+            <s:element minOccurs="0" name="PaymentMethod">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="epm_None" />
+                  <s:enumeration value="epm_BankTransfer" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="STDCode" type="s:long" />
+            <s:element minOccurs="0" name="CPF" type="s:string" />
+            <s:element minOccurs="0" name="CRCNumber" type="s:string" />
+            <s:element minOccurs="0" name="AccountantResponsible">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="LegalRepresentative">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="DIRFResponsible">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="CRCState" type="s:string" />
+            <s:element minOccurs="0" name="Active">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="IDType" type="s:string" />
+            <s:element minOccurs="0" name="BPLID" type="s:long" />
+            <s:element minOccurs="0" name="PassportIssueDate" type="s:date" />
+            <s:element minOccurs="0" name="PassportIssuer" type="s:string" />
+            <s:element minOccurs="0" name="QualificationCode">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="spedNA" />
+                  <s:enumeration value="spedDiretor" />
+                  <s:enumeration value="spedConselheiroDeAdministracao" />
+                  <s:enumeration value="spedAdministrador" />
+                  <s:enumeration value="spedAdministradorDoGrupo" />
+                  <s:enumeration value="spedAdministradorDeSociedadeFiliada" />
+                  <s:enumeration value="spedAdministradorJudicialPessoaFisica" />
+                  <s:enumeration value="spedAdministradorJudicialPessoaJuridicaProfissionalResponsavel" />
+                  <s:enumeration value="spedAdministradorJudicialGestor" />
+                  <s:enumeration value="spedGestorJudicial" />
+                  <s:enumeration value="spedProcurador" />
+                  <s:enumeration value="spedInventariante" />
+                  <s:enumeration value="spedLiquidante" />
+                  <s:enumeration value="spedInterventor" />
+                  <s:enumeration value="spedEmpresario" />
+                  <s:enumeration value="spedContador" />
+                  <s:enumeration value="spedOutros" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="PRWebAccess">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="PreviousPRWebAccess">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="tNO" />
+                  <s:enumeration value="tYES" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+            <s:element minOccurs="0" name="EmployeeAbsenceInfoLines">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeeAbsenceInfo">
+                    <s:complexType>
+                      <s:all>
+                        <s:element minOccurs="0" name="EmployeeID" type="s:long" />
+                        <s:element minOccurs="0" name="LineNum" type="s:long" />
+                        <s:element minOccurs="0" name="FromDate" type="s:date" />
+                        <s:element minOccurs="0" name="ToDate" type="s:date" />
+                        <s:element minOccurs="0" name="Reason" type="s:string" />
+                        <s:element minOccurs="0" name="ApprovedBy" type="s:string" />
+                        <s:element minOccurs="0" name="ConfirmerNumber" type="s:long" />
+                      </s:all>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" name="EmployeeEducationInfoLines">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeeEducationInfo">
+                    <s:complexType>
+                      <s:all>
+                        <s:element minOccurs="0" name="EmployeeNo" type="s:long" />
+                        <s:element minOccurs="0" name="LineNum" type="s:long" />
+                        <s:element minOccurs="0" name="FromDate" type="s:date" />
+                        <s:element minOccurs="0" name="ToDate" type="s:date" />
+                        <s:element minOccurs="0" name="EducationType" type="s:long" />
+                        <s:element minOccurs="0" name="Institute" type="s:string" />
+                        <s:element minOccurs="0" name="Major" type="s:string" />
+                        <s:element minOccurs="0" name="Diploma" type="s:string" />
+                      </s:all>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" name="EmployeeReviewsInfoLines">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeeReviewsInfo">
+                    <s:complexType>
+                      <s:all>
+                        <s:element minOccurs="0" name="EmployeeNo" type="s:long" />
+                        <s:element minOccurs="0" name="LineNum" type="s:long" />
+                        <s:element minOccurs="0" name="Date" type="s:date" />
+                        <s:element minOccurs="0" name="ReviewDescription" type="s:string" />
+                        <s:element minOccurs="0" name="Manager" type="s:long" />
+                        <s:element minOccurs="0" name="Grade" type="s:string" />
+                        <s:element minOccurs="0" name="Remarks" type="s:string" />
+                      </s:all>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" name="EmployeePreviousEmpoymentInfoLines">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeePreviousEmpoymentInfo">
+                    <s:complexType>
+                      <s:all>
+                        <s:element minOccurs="0" name="EmployeeNo" type="s:long" />
+                        <s:element minOccurs="0" name="LineNum" type="s:long" />
+                        <s:element minOccurs="0" name="FromDtae" type="s:date" />
+                        <s:element minOccurs="0" name="ToDate" type="s:date" />
+                        <s:element minOccurs="0" name="Employer" type="s:string" />
+                        <s:element minOccurs="0" name="Position" type="s:string" />
+                        <s:element minOccurs="0" name="Remarks" type="s:string" />
+                      </s:all>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" name="EmployeeRolesInfoLines">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeeRolesInfo">
+                    <s:complexType>
+                      <s:all>
+                        <s:element minOccurs="0" name="EmployeeID" type="s:long" />
+                        <s:element minOccurs="0" name="LineNum" type="s:long" />
+                        <s:element minOccurs="0" name="RoleID" type="s:long" />
+                      </s:all>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" name="EmployeeSavingsPaymentInfoLines">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeeSavingsPaymentInfo">
+                    <s:complexType>
+                      <s:all>
+                        <s:element minOccurs="0" name="EmployeeID" type="s:long" />
+                        <s:element minOccurs="0" name="LineNum" type="s:long" />
+                        <s:element minOccurs="0" name="ContractName" type="s:string" />
+                        <s:element minOccurs="0" name="PaymentNotes" type="s:string" />
+                        <s:element minOccurs="0" name="AN" type="s:double" />
+                        <s:element minOccurs="0" name="ANcurrency" type="s:string" />
+                        <s:element minOccurs="0" name="AG" type="s:double" />
+                        <s:element minOccurs="0" name="AGcurrency" type="s:string" />
+                        <s:element minOccurs="0" name="BankName" type="s:string" />
+                        <s:element minOccurs="0" name="BankCode" type="s:string" />
+                        <s:element minOccurs="0" name="BankAccount" type="s:string" />
+                        <s:element minOccurs="0" name="Sequence">
+                          <s:simpleType>
+                            <s:restriction base="s:string">
+                              <s:enumeration value="cs_Monthly" />
+                              <s:enumeration value="cs_Quarterly" />
+                              <s:enumeration value="cs_SemiAnnually" />
+                              <s:enumeration value="cs_Yearly" />
+                            </s:restriction>
+                          </s:simpleType>
+                        </s:element>
+                      </s:all>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:all>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmployeeInfoParams">
+        <s:complexType>
+          <s:all>
+            <s:element minOccurs="0" name="EmployeeID" type="s:long" />
+          </s:all>
+        </s:complexType>
+      </s:element>
+      <s:element name="MsgHeader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceName">
+              <s:simpleType>
+                <s:restriction base="s:string">
+                  <s:enumeration value="EmployeesInfoService" />
+                </s:restriction>
+              </s:simpleType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="EmployeesInfoService">
+      <s:import namespace="http://www.sap.com/SBO/DIS" />
+      <s:element name="Add">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:EmployeeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetByParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:EmployeeInfoParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:EmployeeInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Remove">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:EmployeeInfoParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:EmployeeInfoParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Close">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:EmployeeInfoParams" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddSoapIn">
+    <wsdl:part name="parameters" element="tns:Add" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapOut">
+    <wsdl:part name="parameters" element="s1:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetByParamsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetByParams" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetByParamsSoapOut">
+    <wsdl:part name="parameters" element="s1:GetByParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Update" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoapOut">
+    <wsdl:part name="parameters" element="s1:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveSoapIn">
+    <wsdl:part name="parameters" element="tns:Remove" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="RemoveSoapOut">
+    <wsdl:part name="parameters" element="s1:RemoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelSoapIn">
+    <wsdl:part name="parameters" element="tns:Cancel" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="CancelSoapOut">
+    <wsdl:part name="parameters" element="s1:CancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="CloseSoapIn">
+    <wsdl:part name="parameters" element="tns:Close" />
+    <wsdl:part name="request_header" element="s1:MsgHeader" />
+  </wsdl:message>
+  <wsdl:message name="CloseSoapOut">
+    <wsdl:part name="parameters" element="s1:CloseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EmployeesInfoServiceSoap">
+    <wsdl:operation name="Add">
+      <wsdl:input message="tns:AddSoapIn" />
+      <wsdl:output message="tns:AddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByParams">
+      <wsdl:input message="tns:GetByParamsSoapIn" />
+      <wsdl:output message="tns:GetByParamsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input message="tns:UpdateSoapIn" />
+      <wsdl:output message="tns:UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove">
+      <wsdl:input message="tns:RemoveSoapIn" />
+      <wsdl:output message="tns:RemoveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cancel">
+      <wsdl:input message="tns:CancelSoapIn" />
+      <wsdl:output message="tns:CancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Close">
+      <wsdl:input message="tns:CloseSoapIn" />
+      <wsdl:output message="tns:CloseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EmployeesInfoServiceSoap" type="tns:EmployeesInfoServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="EmployeesInfoService/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:AddSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByParams">
+      <soap:operation soapAction="EmployeesInfoService/GetByParams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:GetByParamsSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap:operation soapAction="EmployeesInfoService/Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:UpdateSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove">
+      <soap:operation soapAction="EmployeesInfoService/Remove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:RemoveSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cancel">
+      <soap:operation soapAction="EmployeesInfoService/Cancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:CancelSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Close">
+      <soap:operation soapAction="EmployeesInfoService/Close" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+        <soap:header message="tns:CloseSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EmployeesInfoServiceSoap12" type="tns:EmployeesInfoServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Add">
+      <soap12:operation soapAction="EmployeesInfoService/Add" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:AddSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByParams">
+      <soap12:operation soapAction="EmployeesInfoService/GetByParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:GetByParamsSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap12:operation soapAction="EmployeesInfoService/Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:UpdateSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove">
+      <soap12:operation soapAction="EmployeesInfoService/Remove" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:RemoveSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cancel">
+      <soap12:operation soapAction="EmployeesInfoService/Cancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:CancelSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Close">
+      <soap12:operation soapAction="EmployeesInfoService/Close" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" parts="parameters" />
+        <soap12:header message="tns:CloseSoapIn" part="request_header" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmployeesInfoService">
+    <wsdl:port name="EmployeesInfoServiceSoap" binding="tns:EmployeesInfoServiceSoap">
+      <soap:address location="http://192.168.5.75/B1WS/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EmployeesInfoServiceSoap12" binding="tns:EmployeesInfoServiceSoap12">
+      <soap12:address location="http://192.168.5.75/B1WS/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
